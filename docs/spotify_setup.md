@@ -15,8 +15,8 @@ This guide explains how to set up and use the Spotify playlist extraction functi
 2. Log in with your Spotify account
 3. Click "Create App"
 4. Fill in the details:
-   - **App Name**: `Music League Helper` (or any name you prefer)
-   - **App Description**: `Tool for extracting playlist data from Music League`
+   - **App Name**: `Spotify to YouTube Music Converter` (or any name you prefer)
+   - **App Description**: `Tool for extracting playlist data from Spotify
    - **Website**: Leave blank or use `http://localhost`
    - **Redirect URI**: `http://localhost:8080/callback` (not used for Client Credentials flow, but required)
 5. Check the boxes for the terms of service

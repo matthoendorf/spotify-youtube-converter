@@ -408,8 +408,8 @@ if __name__ == "__main__":
         
         # Test playlist creation
         test_playlist = service.create_playlist(
-            title="Test Music League Playlist",
-            description="Test playlist created by Music League Helper"
+            title="Test Spotify Playlist",
+            description="Test playlist created by Spotify to YouTube Music Converter"
         )
         
         if test_playlist:

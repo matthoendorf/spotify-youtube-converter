@@ -1,5 +1,5 @@
 """
-Music League Helper - Streamlit App
+Spotify to YouTube Music Converter- Streamlit App
 Extract Spotify playlist data and find tracks on YouTube Music
 """
 
@@ -15,7 +15,7 @@ from services.youtube_playlist import create_youtube_playlist_streamlit
 
 # Page configuration
 st.set_page_config(
-    page_title="Music League Helper",
+    page_title="Spotify to YouTube Music Converter",
     page_icon="🎵",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -39,7 +39,7 @@ def main():
         st.session_state.playlist_creation_data = None
     
     # Header
-    st.title("🎵 Music League Helper")
+    st.title("🎵 Spotify to YouTube Music Converter")
     st.markdown("Extract Spotify playlist data and find tracks on YouTube Music")
     
     # Sidebar for settings
@@ -75,7 +75,7 @@ def main():
         # Info
         st.subheader("ℹ️ About")
         st.info(
-            "This tool helps you find Music League playlist tracks on YouTube Music "
+            "This tool helps you find Spotify playlist tracks on YouTube Music "
             "since you don't have Spotify Premium. Perfect for discovering new music!"
         )
     
@@ -88,14 +88,9 @@ def main():
         playlist_url = st.text_input(
             "Enter Spotify Playlist URL:",
             placeholder="https://open.spotify.com/playlist/...",
-            help="Paste the URL of a public Spotify playlist from Music League"
+            help="Paste the URL of a public Spotify playlist"
         )
         
-        # Example URLs
-        with st.expander("📝 Example URLs"):
-            st.code("https://open.spotify.com/playlist/21VEt90ZQIRa95rmeFi5Um?pi=PmIzTgsdTOCAX")
-            st.caption("Music League playlists are typically public and can be accessed without Premium")
-    
     with col2:
         # Quick stats (will be populated after extraction)
         st.subheader("📊 Quick Stats")
