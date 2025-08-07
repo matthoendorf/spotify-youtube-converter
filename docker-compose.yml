@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: spotify-youtube-converter
+    ports:
+      - "8501:8501"
+    volumes:
+      # Mount source code for development
+      - ./:/app
+      # Preserve data between restarts
+      - ./data:/app/data
+      # Mount .env file
+      - ./.env:/app/.env:ro
+    environment:
+      - PYTHONPATH=/app
+    restart: unless-stopped
